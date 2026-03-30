@@ -24,6 +24,15 @@ body {
   font-family: var(--font-dm-sans), sans-serif;
 }
 
+.font-agent-mono {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Console", monospace;
+}
+
+.radial-fade-mask {
+  mask-image: radial-gradient(circle, black 40%, transparent 95%);
+  -webkit-mask-image: radial-gradient(circle, black 40%, transparent 95%);
+}
+
 @keyframes infinite-scroll {
   from {
     transform: translateX(0);
