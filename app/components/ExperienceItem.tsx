@@ -5,8 +5,8 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface ExperienceItemProps {
     title: string;
-    role: string;
-    children: React.ReactNode;
+    role?: string;
+    children?: React.ReactNode;
     collapsible?: boolean;
     link?: string;
     collapsedHeight?: string;
@@ -14,6 +14,7 @@ interface ExperienceItemProps {
 
 export function ExperienceItem({ title, role, children, collapsible = false, link, collapsedHeight = "max-h-20" }: ExperienceItemProps) {
     const [isExpanded, setIsExpanded] = useState(false);
+    const hasContent = children !== undefined && children !== null;
 
     return (
         <div className="group">
@@ -31,17 +32,21 @@ export function ExperienceItem({ title, role, children, collapsible = false, lin
                         </a>
                     )}
                 </div>
-                <span className="text-sm text-gray-400 dark:text-gray-500">{role}</span>
+                {role ? (
+                    <span className="text-sm text-gray-400 dark:text-gray-500">{role}</span>
+                ) : null}
             </div>
 
-            <div className={`relative max-w-xl text-sm leading-relaxed text-gray-500 dark:text-gray-400 transition-all duration-300 ${!isExpanded && collapsible ? `${collapsedHeight} overflow-hidden` : ""}`}>
-                {children}
-                {collapsible && !isExpanded && (
-                    <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white dark:from-black to-transparent" />
-                )}
-            </div>
+            {hasContent ? (
+                <div className={`relative max-w-xl text-sm leading-relaxed text-gray-500 dark:text-gray-400 transition-all duration-300 ${!isExpanded && collapsible ? `${collapsedHeight} overflow-hidden` : ""}`}>
+                    {children}
+                    {collapsible && !isExpanded && (
+                        <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white dark:from-black to-transparent" />
+                    )}
+                </div>
+            ) : null}
 
-            {collapsible && (
+            {collapsible && hasContent && (
                 <button
                     onClick={() => setIsExpanded(!isExpanded)}
                     className="mt-2 flex items-center gap-1 text-xs font-medium text-gray-400 dark:text-gray-500 hover:text-black dark:hover:text-white"
