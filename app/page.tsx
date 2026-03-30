@@ -847,7 +847,7 @@ export default function Home() {
               </button>
               <div className="rounded-lg bg-white p-2">
                 <QRCodeSVG
-                  value="https://www.justaditya.com/"
+                  value="https://anantgabhane.com/"
                   size={200}
                   level="H"
                   includeMargin={false}
