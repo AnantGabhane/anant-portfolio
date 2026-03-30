@@ -124,7 +124,7 @@ const categories: SkillCategory[] = [
             { name: "Vercel", slug: "vercel" },
             { name: "Git", slug: "git" },
             { name: "GitHub", slug: "github" },
-            { name: "GitLub", slug: "gitlab" },
+            { name: "GitLab", slug: "gitlab" },
             { name: "Linux", slug: "linux" },
         ]
     },
