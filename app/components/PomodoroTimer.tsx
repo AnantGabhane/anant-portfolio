@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Play, Pause, RotateCcw, Coffee, Timer as TimerIcon } from "lucide-react";
+import { Play, Pause, RotateCcw } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function PomodoroTimer() {
@@ -32,22 +32,31 @@ export function PomodoroTimer() {
     }, [completed]);
 
     useEffect(() => {
-        if (isActive && timeLeft > 0) {
-            timerRef.current = setInterval(() => {
-                setTimeLeft((prev) => prev - 1);
-            }, 1000);
-        } else if (timeLeft === 0 && isActive) {
-            setIsActive(false);
-            setCompleted(true);
+        if (!isActive) {
             if (timerRef.current) clearInterval(timerRef.current);
-        } else {
-            if (timerRef.current) clearInterval(timerRef.current);
+            timerRef.current = null;
+            return;
         }
+
+        timerRef.current = setInterval(() => {
+            setTimeLeft((prev) => {
+                if (prev <= 1) {
+                    if (timerRef.current) clearInterval(timerRef.current);
+                    timerRef.current = null;
+                    setIsActive(false);
+                    setCompleted(true);
+                    return 0;
+                }
+
+                return prev - 1;
+            });
+        }, 1000);
 
         return () => {
             if (timerRef.current) clearInterval(timerRef.current);
+            timerRef.current = null;
         };
-    }, [isActive, timeLeft]);
+    }, [isActive]);
 
     const toggleTimer = () => setIsActive(!isActive);
 
