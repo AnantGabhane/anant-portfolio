@@ -262,7 +262,7 @@ export default function Home() {
               <h1 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Experience
               </h1>
-              <h2 className="font-bold">ApexaiQ Technologies</h2>
+              <h2 className="font-bold"><a href="https://www.apexaiq.com/" target="_blank" rel="noopener noreferrer">ApexaiQ Technologies</a></h2>
               <div className="space-y-12">
                 <ExperienceItem
                   title="Full Stack Web Developer"
@@ -335,7 +335,8 @@ export default function Home() {
                   <div className="space-y-2">
                     <p>Managed 500+ customer support tickets, ensuring timely resolution and high customer satisfaction.</p>
                     <p>Participated in customer calls, capturing insights and translating them into actionable engineering requirements.</p>
-                    <p>Managed a team of 4 developers while simultaneously supporting two high-value clients: Lunarspace and Concordium (a privacy-focused Layer-1 blockchain platform) - balancing tight deadlines, client expectations, and resource constraints in a fast-paced environment. Authored comprehensive legal and technical developer handbooks to standardize onboarding, compliance, and best practices for new recruits.</p>
+                    <p>Managed a team of 4 developers while simultaneously supporting two high-value clients- balancing tight deadlines, client expectations, and resource constraints in a fast-paced environment.</p>
+                    <p>Authored comprehensive legal and technical developer handbooks to standardize onboarding, compliance, and best practices for new recruits.</p>
                   </div>
                 </ExperienceItem>
               </div>
