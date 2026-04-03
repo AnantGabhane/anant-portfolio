@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Github, Linkedin, Youtube, Calendar, Bot, User, QrCode, X, Music, Pause } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import { ExperienceItem } from "./components/ExperienceItem";
-import { GithubGraph } from "./components/GithubGraph";
 import { TechStack } from "./components/TechStack";
 import { useState, useEffect, useRef } from "react";
 import { QRCodeSVG } from "qrcode.react";
@@ -411,20 +410,31 @@ export default function Home() {
               </div>
             </div>
 
-
-            {/* Education Section */}
+            {/* Contributions Section */}
             <div className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
-                Education
+                GitLab Contributions
               </h2>
-              <div className="space-y-12">
-                <ExperienceItem
-                  title="Shri Sant Gajanan Maharaj College of Engineering, Shegaon"
-                  role="Electronics and Telecommunications Engineering"
-                >
-                  <p>2019 - 2023</p>
-                </ExperienceItem>
+              <div className="mb-10 overflow-hidden rounded-xl bg-[#171321]">
+                <Image
+                  src={GITLAB_IMAGE_SRC}
+                  alt="GitLab contributions chart"
+                  width={851}
+                  height={165}
+                  className="h-auto w-full"
+                />
               </div>
+            </div>
+
+            {/* Tech Stack Section */}
+            <div className="mb-16 w-full text-left">
+              <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
+                Tech Stack
+              </h2>
+              <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
+                I&apos;m a generalist at heart who can build with anything, but here&apos;s the core stack I&apos;ve spent the most time with:
+              </p>
+              <TechStack />
             </div>
 
             {/* Achievement Section */}
@@ -459,25 +469,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Contributions Section */}
-            <div className="mb-16 w-full text-left">
-              <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
-                GitLab Contributions
-              </h2>
-              <div className="mb-10 overflow-hidden rounded-xl bg-[#171321]">
-                <Image
-                  src={GITLAB_IMAGE_SRC}
-                  alt="GitLab contributions chart"
-                  width={851}
-                  height={165}
-                  className="h-auto w-full"
-                />
-              </div>
-              <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
-                GitHub Contributions
-              </h2>
-              <GithubGraph />
-            </div>
+
 
             {/* Research Publications Section */}
             <div className="mb-16 w-full text-left">
@@ -517,16 +509,24 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Tech Stack Section */}
+            {/* Education Section */}
             <div className="mb-16 w-full text-left">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
-                Tech Stack
+                Education
               </h2>
-              <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
-                I&apos;m a generalist at heart who can build with anything, but here&apos;s the core stack I&apos;ve spent the most time with:
-              </p>
-              <TechStack />
+              <div className="space-y-12">
+                <ExperienceItem
+                  title="Shri Sant Gajanan Maharaj College of Engineering, Shegaon"
+                  role="Electronics and Telecommunications Engineering"
+                >
+                  <p>2019 - 2023</p>
+                </ExperienceItem>
+              </div>
             </div>
+
+
+
+
 
             {/* Recommendations by Clients Section */}
             {/* <div className="mb-16 w-full text-left">
@@ -703,7 +703,7 @@ export default function Home() {
                 </p>
 
                 <div className="flex justify-center">
-                  <div className="radial-fade-mask relative h-[250px] w-full max-w-sm grayscale transition-all duration-700 hover:grayscale-0 sm:h-[350px]">
+                  <div className="radial-fade-mask relative h-[250px] w-full max-w-sm sm:h-[350px]">
                     <Image
                       src="/myra.jpeg"
                       alt="Casual photo"
