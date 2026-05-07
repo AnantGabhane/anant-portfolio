@@ -13,6 +13,16 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Anant Gabhane",
   description: "All about me",
+  icons: {
+    icon: [
+      {
+        url: "/icon.png",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({

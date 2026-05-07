@@ -1,11 +1,10 @@
 import { MetadataRoute } from 'next'
+import { SITE_URL } from './lib/agent-discovery'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://www.justaditya.com'
-
     return [
         {
-            url: baseUrl,
+            url: SITE_URL,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 1,

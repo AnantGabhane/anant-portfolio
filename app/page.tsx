@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { PomodoroTimer } from "./components/PomodoroTimer";
 import { NeuralNetworkSim } from "./components/NeuralNetworkSim";
+import { WebMCPTools } from "./components/WebMCPTools";
 
 import { getMarkdownContent } from "./data/content";
 
@@ -100,6 +101,7 @@ export default function Home() {
 
   return (
     <div className={`relative flex min-h-screen flex-col items-center bg-white dark:bg-black px-3 pt-16 text-black dark:text-white selection:bg-black dark:selection:bg-white selection:text-white dark:selection:text-black pb-32 sm:px-4 sm:pt-24 sm:pb-40 overflow-x-hidden transition-colors duration-300`}>
+      <WebMCPTools markdownContent={markdownContent} onModeChange={setMode} />
       {/* Easter Egg Effects */}
       <AnimatePresence>
         {showEasterEgg && (
