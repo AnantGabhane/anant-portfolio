@@ -343,6 +343,27 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Projects Section */}
+            <div className="mb-16 w-full text-left">
+              <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
+                Projects
+              </h2>
+              <div className="space-y-12">
+                <ExperienceItem
+                  title="HPersona"
+                  role="AI persona learning app"
+                  collapsible={true}
+                  link="https://ai-persona.anantgabhane.com/"
+                >
+                  <div className="space-y-2">
+                    <p>Built an AI-powered coding tutor where learners chat with personas inspired by Indian tech educators Hitesh Choudhary and Piyush Garg.</p>
+                    <p>Supports persona switching, Hinglish and English modes, adjustable temperature and learning tone, markdown-rendered answers, warm dark mode, and Clerk-based authentication.</p>
+                    <p>Powered by Next.js, TypeScript, Tailwind CSS, Clerk, the OpenAI API, Vitest, and Vercel.</p>
+                  </div>
+                </ExperienceItem>
+              </div>
+            </div>
+
 
             {/* In Between These Experiences Section */}
             <div className="mb-16 w-full text-left">

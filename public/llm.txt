@@ -60,6 +60,26 @@ Oct 2023 – Present
 - Managed a team of 4 developers while supporting clients including Lunarspace and Concordium.
 - Authored legal and technical developer handbooks for onboarding and compliance.
 
+## Projects
+
+### HPersona
+
+Live demo:
+https://ai-persona.anantgabhane.com/
+
+HPersona is an AI-powered coding tutor where learners chat with personas inspired by Indian tech educators Hitesh Choudhary and Piyush Garg.
+
+Key features:
+
+- Persona switching with separate conversation styles and message history.
+- Hinglish and English modes for more natural learning conversations.
+- Adjustable temperature and learning tone controls.
+- Markdown-rendered answers with code blocks, headers, lists, and bold text.
+- Clerk-based authentication with a free prompt tier.
+- Warm light and dark mode interface.
+
+Tech stack: Next.js, TypeScript, Tailwind CSS, Clerk, OpenAI API, Vitest, and Vercel.
+
 ## In Between These Experiences
 
 ### The AI Learning & Exploration Journey
